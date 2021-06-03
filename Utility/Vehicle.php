@@ -21,6 +21,10 @@ class Vehicle
     return $this->registrationType;
   }
 
+  public function getPLastDigit(){
+    return substr($this->plateNumber,-1);
+  }
+
   private function rTypeBasedOnPlate(){
     $registrationType;
     switch (substr($this->plateNumber, 1, -6)) {
