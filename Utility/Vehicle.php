@@ -51,7 +51,7 @@ class Vehicle
 
   private function validatePlateNumber(string $plateNumber){
     if(strlen($plateNumber)==7||strlen($plateNumber)==8){
-      $plateNumber=strlen($plateNumber)==7?'0'.$plateNumber:$plateNumber;
+      $plateNumber=strlen($plateNumber)==7?substr_replace($plateNumber,"0",4,0):$plateNumber;
       $first3Digits=substr($plateNumber,0,-5);
       $last4Digits=substr($plateNumber,4);
       if(ctype_alpha($first3Digits)&&is_numeric($last4Digits)&&$plateNumber[3]=='-'){
