@@ -7,7 +7,7 @@ class Vehicle
   public function __construct(string $plateNumber)
   {
     if(!$this->validatePlateNumber($plateNumber)){
-      throw new Exception('PlateNumber is not valid. It must contain 3 alphabetic characters, a "-" and 3 to 4 numeric digits, e.g. AAA-1234.');
+      throw new InvalidArgumentException('PlateNumber is not valid. It must contain 3 alphabetic characters, a "-" and 3 to 4 numeric digits, e.g. AAA-1234.');
     }
     $this->plateNumber=$plateNumber;
     $this->registrationType=$this->rTypeBasedOnPlate();

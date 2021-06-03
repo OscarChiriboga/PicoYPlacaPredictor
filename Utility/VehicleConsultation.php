@@ -9,8 +9,8 @@ class VehicleConsultation
 
   public function __construct(string $date,string $time,string $plateNumber)
   {
-      if(!$this->validateDate($date)){throw new Exception('Please choose a valid date');}
-      if(!$this->validateDate($time,'H:i:s')){throw new Exception('Please choose a valid time');}
+      if(!$this->validateDate($date)){throw new InvalidArgumentException('Please choose a valid date');}
+      if(!$this->validateDate($time,'H:i:s')){throw new InvalidArgumentException('Please choose a valid time');}
       $this->vehicle=new Vehicle($plateNumber);
       $this->date=$date;
       $this->time=$time;
