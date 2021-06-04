@@ -49,7 +49,7 @@ class Vehicle
     return $registrationType;
   }
 
-  private function validatePlateNumber(string $plateNumber){
+  private function validatePlateNumber(string &$plateNumber){
     if(strlen($plateNumber)==7||strlen($plateNumber)==8){
       $plateNumber=strlen($plateNumber)==7?substr_replace($plateNumber,"0",4,0):$plateNumber;
       $first3Digits=substr($plateNumber,0,-5);
