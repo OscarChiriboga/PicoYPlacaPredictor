@@ -32,6 +32,7 @@ if(isset($_POST['submit'])&&$errors==0){
   <meta charset="utf-8">
   <title>Pico Y Placa Predictor</title>
   <link rel="stylesheet" href="css/index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <div id="containerBox" class="box">
@@ -40,11 +41,11 @@ if(isset($_POST['submit'])&&$errors==0){
     <form id="containerBox22" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
 
       <div id="Box221">
-        <div id="ContactTitle1" class="ContactTitle">
-          <h1 id="Contacto">Pico Y Placa Predictor</h1>
+        <div id="Title1" class="Title">
+          <h1 id="Titulo">Pico Y Placa Predictor</h1>
         </div>
-        <div id="ContactTitle2" class="ContactTitle">
-          <hr class="ContactTitle2">
+        <div id="Title2" class="Title">
+          <hr class="Title2">
         </div>
       </div>
 
@@ -58,16 +59,18 @@ if(isset($_POST['submit'])&&$errors==0){
       </div>
 
       <div id="Box223">
-        <ul class="datos">
+        <ul id="dateInputContainer" class="datos">
           <li class="datos"><label class="datos" for="date">Date (*):</label></li>
           <li class="datos"><input class="datos" type="Date" name="date" min="<?php echo date("Y-m-d");?>"></li>
           <li class="datos"><br><br></li>
+        </ul>
+        <ul class="datos">
           <li id="buttonContainer" class="datos"><input id="button" type="submit" name="submit" value="Enviar"></li>
           <li id="message" class="datos"><?php echo $message;?></li>
         </ul>
       </div>
 
-      <div id="Boxx224">
+      <div id="Box224">
         <ul class="datos">
           <li class="datos"><label class="datos" for="time">Time (*):</label></li>
           <li class="datos"><input class="datos" type="time" name="time"></li>
