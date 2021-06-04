@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body,html{
+  height: 100%;
+  margin: 0;
+  color: white;
+  font-family: 'Roboto', serif;
+  font-weight: normal;
+  background-color: black;
+}
+
+h1{
+  font-family: 'Bebas Neue', cursive;
+  font-style: normal;
+  font-size: 2.85vw;
+}
+
+h2{
+  font-weight: normal;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #fd9e2b;
+}
+
+#message{
+  text-align: center;
+}
+
+#containerBox{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 78.3203vw 1fr;
+  grid-template-rows: calc((100% - 33.5957vw)/2) 33.595703125vw calc((100% - 33.595703125vw)/2);
+  grid-template-areas: 'c1 c1 c1' 'c3 c2 c4' 'c5 c5 c5';
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#Box21,#Box23,#Box24,#Box25{
+  background-color: transparent;
+}
+
+#Box21{
+  grid-area: c1;
+}
+
+#Box23{
+  grid-area: c3;
+}
+
+#Box24{
+  grid-area: c4;
+}
+
+#Box25{
+  grid-area: c5;
+}
+
+#buttonContainer{
+  text-align: center;
+}
+
+#button {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', serif;
+    font-weight: normal;
+    font-size: 1rem;
+    border-style: solid;
+    border-color: #fd9e2b;
+    border-radius: 12px;
+    padding: 1vw 3vw;
+    text-decoration: none;
+    background: none;
+}
+
+#button:hover{
+  color: #fd9e2b;
+  border-color: white;
+}
+
+#containerBox22{
+  grid-area: c2;
+  opacity: 0.91;
+  background-color: black;
+  display: grid;
+  grid-template-rows: 7.03125vw;
+  grid-template-columns: 29.2969vw 23.9583vw 25.0651vw;
+  grid-template-areas: 'a1 a1 a1' 'a2 a3 a4';
+  border-radius: 12px;
+}
+
+#Box221{
+  grid-area: a1;
+  display: grid;
+  grid-template-columns: 34% 66%;
+  color: #fd9e2b;
+}
+
+
+#Box222{
+  grid-area: a2;
+  font-style: normal;
+
+}
+
+#Box223{
+  grid-area: a3;
+}
+
+#Box224{
+  grid-area: a4;
+}
+
+#Contacto{
+  margin-left: 4.2318vw;
+  margin-top: 3.6458vw;
+  margin-bottom: 0;
+}
+
+hr.ContactTitle2{
+  border: 0.5px solid #fd9e2b;
+  margin-top: 6.09375vw;
+  margin-right: 7.2318vw;
+}
+
+#listasA{
+  margin-left:  4.2318vw;
+}
+
+ul.listasA,ul.datos{
+  padding: 0;
+}
+
+li.listasA,li.datos{
+  margin-bottom: 0.9960vw;
+}
+
+h2.listasA{
+  margin-bottom: 0.3622vw;
+}
+
+input.datos,select.datos{
+  font-family: 'Roboto', serif;
+  border-style: none;
+  border-radius: 4px;
+  width: 17.7272vw;
+  height: 2.7220vw;
+}
+
+#comentario{
+  width: 21.5117vw;
+  height: 12.6146vw;
+  resize: none;
+}
+
+ul.datos{
+  margin-top: 1.8438vw;
+}
+
+#datos2{
+  margin-right:  4.2318vw;
+}
