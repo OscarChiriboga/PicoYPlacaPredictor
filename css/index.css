@@ -1,3 +1,9 @@
+/*
+Name: Oscar Chiriboga
+File: Index.css
+Description: Contains index.php stylesheet
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
@@ -73,17 +79,17 @@ a:hover{
 }
 
 #button {
-    text-align: center;
-    color: white;
-    font-family: 'Roboto', serif;
-    font-weight: normal;
-    font-size: 1rem;
-    border-style: solid;
-    border-color: #fd9e2b;
-    border-radius: 12px;
-    padding: 1vw 3vw;
-    text-decoration: none;
-    background: none;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', serif;
+  font-weight: normal;
+  font-size: 1rem;
+  border-style: solid;
+  border-color: #fd9e2b;
+  border-radius: 12px;
+  padding: 1vw 3vw;
+  text-decoration: none;
+  background: none;
 }
 
 #button:hover{
@@ -217,17 +223,16 @@ ul.datos{
   }
 
   input.datos{
-  border-radius: 4px;
-  width: 80%;
-  height: 8.2vw;
-}
+    border-radius: 4px;
+    width: 80%;
+    height: 8.2vw;
+  }
 
-h1{
-  font-size: 8.85vw;
-}
+  h1{
+    font-size: 8.85vw;
+  }
 
-#Titulo{
-  margin-left: 0;
-}
-
+  #Titulo{
+    margin-left: 0;
+  }
 }

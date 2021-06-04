@@ -1,4 +1,10 @@
 <?php
+/*
+Name: Oscar Chiriboga
+File: VehicleConsultation.php
+Description: Contains VehicleConsultation class, which represents a consultation made by a user
+*/
+
 require_once('Vehicle.php');
 
 class VehicleConsultation
@@ -6,7 +12,7 @@ class VehicleConsultation
   private string $date;
   private string $time;
   private Vehicle $vehicle;
-
+  //Class constructor
   public function __construct(string $date,string $time,string $plateNumber)
   {
       if(!$this->validateDate($date)){throw new InvalidArgumentException('Please choose a valid date');}
@@ -15,7 +21,7 @@ class VehicleConsultation
       $this->date=$date;
       $this->time=$time;
   }
-
+  //Get functions
   public function getDate(){
     return $this->date;
   }
@@ -27,17 +33,13 @@ class VehicleConsultation
   public function getVehicle(){
     return $this->vehicle;
   }
-
-  public static function getUnixTime($time){
-    return strtotime($time);
-  }
-
+  //Returns the day of a date
   public function getDayBasedOnDate(){
     $timestamp = strtotime($this->date);
     $day = date('l', $timestamp);
     return $day;
   }
-
+  //Validates a date/time given a format
   private function validateDate(string $date,string $format = 'Y-m-d'){
     $dateCheck = DateTime::createFromFormat($format, $date);
     return $dateCheck && $dateCheck->format($format) === $date;

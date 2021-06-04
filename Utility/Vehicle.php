@@ -1,9 +1,16 @@
 <?php
+/*
+Name: Oscar Chiriboga
+File: Vehicle.php
+Description: Contains class that represents a Vehicle
+*/
+
 class Vehicle
 {
   private string $plateNumber;
   private string $registrationType;
 
+  //Class constructor
   public function __construct(string $plateNumber)
   {
     if(!$this->validatePlateNumber($plateNumber)){
@@ -12,7 +19,7 @@ class Vehicle
     $this->plateNumber=$plateNumber;
     $this->registrationType=$this->rTypeBasedOnPlate();
   }
-
+  //Get functions
   public function getPlateNumber(){
     return $this->plateNumber;
   }
@@ -20,11 +27,11 @@ class Vehicle
   public function getRegistrationType(){
     return $this->registrationType;
   }
-
+  //Returns plate number's last digit
   public function getPLastDigit(){
     return substr($this->plateNumber,-1);
   }
-
+  //Returns the registration type of a Vehicle based on the plate number's 2nd character
   private function rTypeBasedOnPlate(){
     $registrationType;
     switch (substr($this->plateNumber, 1, -6)) {
@@ -48,7 +55,7 @@ class Vehicle
     }
     return $registrationType;
   }
-
+  //Validates a plate number, adds a zero to 7 digit plate numbers (old plate number format)
   private function validatePlateNumber(string &$plateNumber){
     if(strlen($plateNumber)==7||strlen($plateNumber)==8){
       $plateNumber=strlen($plateNumber)==7?substr_replace($plateNumber,"0",4,0):$plateNumber;

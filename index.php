@@ -1,4 +1,9 @@
 <?php
+/*
+Name: Oscar Chiriboga
+File: index.php
+Description: Contains homepage of project
+*/
 require_once('Utility/PicoYPlacaPredictor.php');
 
 $plateNumber='';
