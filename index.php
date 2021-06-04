@@ -61,7 +61,7 @@ if(isset($_POST['submit'])&&$errors==0){
         <ul class="datos">
           <li class="datos"><label class="datos" for="date">Date (*):</label></li>
           <li class="datos"><input class="datos" type="Date" name="date" min="<?php echo date("Y-m-d");?>"></li>
-          <li class="datos"><br><br><br></li>
+          <li class="datos"><br><br></li>
           <li id="buttonContainer" class="datos"><input id="button" type="submit" name="submit" value="Enviar"></li>
           <li id="message" class="datos"><?php echo $message;?></li>
         </ul>
