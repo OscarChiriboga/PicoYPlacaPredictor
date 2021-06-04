@@ -16,7 +16,7 @@ if(isset($_POST['submit'])) {
   }
   catch (Exception $e){
     $errors=1;
-    $message=$e->getMessage();
+    $message="Warning: ".$e->getMessage();
   }
 }
 if(isset($_POST['submit'])&&$errors==0){
